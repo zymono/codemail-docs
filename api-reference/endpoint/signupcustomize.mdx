@@ -1,0 +1,115 @@
+---
+title: "Customization"
+description: "Customize your Codemail"
+---
+
+Here are some customization examples.
+
+## CSS
+
+```css
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	text-align: center;
+}
+
+h1 {
+	margin-top: 0;
+}
+
+form input[type="email"] {
+	padding: 10px;
+	border: none;
+	border-radius: 4px;
+	margin-right: 10px;
+	width: 300px;
+}
+
+.btn-join {
+	background-color: #4CAF50;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.btn-join:hover {
+	background-color: #3e8e41;
+}
+
+.disclaimer {
+	margin-top: 20px;
+	font-size: 14px;
+	color: #999;
+}
+```
+
+## HTML
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Join Mailing List</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    
+  <!-- Add the Google Analytics tracking code here -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <h1 id="title">Join Our Mailing List</h1>
+    <p>Enter your email address below to receive updates and news:</p>
+    <form id="cmForm">
+      <input type="email" name="email" placeholder="Enter your email address" id="codemail-email" required>
+      <input type="submit" value="Join" class="btn-join">
+    </form>
+    <p class="disclaimer"></p>
+  </div>
+  <script src=script.js></script>
+
+  <script type="module">
+    import {subscribe, saveCloud} from "https://codemail.zymono.com/1.0/mail.js"
+    window.addEventListener("load", function () {
+      const cmt = new URLSearchParams(location.search).get('id')
+      document.getElementById('cmForm').addEventListener("submit", function (event) {
+        event.preventDefault()
+        gtag('event', 'subscribe', {
+          'event_category': 'Codemail List',
+          'event_label': formName,
+          'value': 1
+        });
+        subscribe(cmt, 'Subscribe', './joined/')
+
+      })
+    })
+  </script>
+</body>
+
+</html>
+```
+
+Code © Zymono Codemail. For TESTING use only!
