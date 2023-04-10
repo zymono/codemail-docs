@@ -8,15 +8,6 @@ description: "Signup a user to your mailing list"
 ```html cm.html
 <head>
   <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
-  
-  <!-- Add the Google Analytics tracking code here -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'GA_MEASUREMENT_ID');
-  </script>
 </head>
   
 <script type="module">
@@ -33,14 +24,23 @@ description: "Signup a user to your mailing list"
 <script type="module">
   import { subscribe, saveCloud } from  "https://codemail.zymono.com/1.0/mail.js"
   window.addEventListener("load", function() {
-    const cmt = 'Your_Mail_Token_Here'
     document.getElementById('cmForm').addEventListener("submit", function(event) {
       event.preventDefault()
-      subscribe(cmt, 'FORM_NAME_HERE')
+      subscribe('Token', 'FORM_NAME', 'REDIRECT_URL')
     })
   })
 </script>
 ```
 </CodeGroup>
+
+<ParamField path="Token" type="token">
+  The token given to you by Codemail
+</ParamField>
+<ParamField path="FORM_NAME" type="string">
+  Name that will be displayed for signups
+</ParamField>
+<ParamField path="REDIRECT_URL" type="URL">
+  URL for the user to be redirected to upon completion. (Enter `window.location` for no redirect)
+</ParamField>
 
 Navigate back to https://codemail.zymono.com/dashboard/ to see and export your mailing list.
