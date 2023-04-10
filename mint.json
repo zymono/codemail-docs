@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Documentation Starter Kit",
+  "name": "Zymono Codemail",
   "logo": {
     "dark": "/logo/dark.png",
     "light": "/logo/light.png"
@@ -13,13 +13,13 @@
   },
   "topbarLinks": [
     {
-      "name": "Documentation",
-      "url": "https://mintlify.com/docs"
+      "name": "Dashboard",
+      "url": "https://codemail.zymono.com/dashboard/"
     }
   ],
   "topbarCtaButton": {
     "name": "Get Started",
-    "url": "https://github.com/mintlify/starter"
+    "url": "https://codemail.zymono.com"
   },
   "anchors": [
     {
@@ -30,12 +30,12 @@
     {
       "name": "Changelog",
       "icon": "list",
-      "url": "https://mintlify.com"
+      "url": "https://codemail.zymono.com/changes"
     },
     {
-      "name": "Community",
-      "icon": "discord",
-      "url": "https://mintlify.com/community"
+      "name": "Open Source",
+      "icon": "github",
+      "url": "https://github.com/zymono/codemail"
     }
   ],
   "navigation": [
@@ -48,18 +48,15 @@
       "pages": ["api-reference/authentication"]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Examples",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/update",
-        "api-reference/endpoint/delete"
+        "api-reference/endpoint/create"
       ]
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "twitter": "https://twitter.com/useZymono",
+    "github": "https://github.com/zymono",
+    "youtube": "https://www.youtube.com/@zymono"
   }
 }
