@@ -1,0 +1,50 @@
+---
+title: "Analytics"
+description: "Provide analytics through Google"
+---
+
+Here is a modification of the default signup form with code for analytics.
+
+```html
+<head>
+  <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+  
+  <!-- Add the Google Analytics tracking code here -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+</head>
+  
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+    import { getStorage, ref, uploadString } from "https://email-1.zymono.repl.co/1.0/storageapi.js"; 
+</script>
+
+<form id="cmForm">
+  <input placeholder="Please Enter Your Email" id="codemail-email" type="email" required><br>
+  <input type="submit" value="Subscribe"><br><br>
+  This email signup form was created with Zymono Codemail and the Zymono <a href="//zymono.com/policy/privacy.html">Privacy Policy</a> and <a href="//zymono.com/policy/terms.html">Terms of Service</a> apply.
+</form>
+
+<script type="module">
+  import { subscribe, saveCloud } from  "https://codemail.zymono.com/1.0/mail.js"
+  window.addEventListener("load", function() {
+    document.getElementById('cmForm').addEventListener("submit", function(event) {
+      event.preventDefault()
+      gtag('event', 'subscribe', {
+          'event_category': 'Codemail List',
+          'event_label': 'FORM_NAME',
+          'value': 1
+        });
+  
+      subscribe('Token', 'FORM_NAME', 'REDIRECT_URL')
+    })
+  })
+</script>
+```
+
+You can create a Google Analytics account and measurement ID at https://analytics.google.com
