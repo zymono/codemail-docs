@@ -1,22 +1,42 @@
 ---
 title: "Authentication"
-description: "Example overview page before API endpoints"
+description: "Authenticate requests to Codemail"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et eros iaculis tortor dapibus cursus. Curabitur quis sapien nec tortor dictum gravida.
+Codemail uses `Tokens` to identify developers, access to this token can grant a user access to create forms on your behalf.
 
-```bash
-'Authorization': 'Token <team_token>'
+> We recommend that you store your token in an environment variable at all times.
+
+```js
+subscribe('Your_Token')
 ```
 
 ## API Tokens
 
-Nullam convallis mauris at nunc consectetur, ac imperdiet leo rutrum. Maecenas cursus purus a pellentesque blandit. Pellentesque vitae lacinia libero, non mollis metus.
+A token is granted to your account upon creation and can be recieved by going to your dashboard and clicking `Copy Mail Token`.
 
-Nam id ullamcorper urna, at rutrum enim. [Maecenas vulputate](/introduction) vehicula libero, vitae sodales augue pretium nec. Quisque a magna tempor, semper risus vel, fermentum nunc. Pellentesque fermentum interdum ex, eu convallis massa blandit sed. Aliquam bibendum ipsum vel laoreet auctor.
+This token grants your a pass to use the Zymono Codemail services. If your token is revoked, so is your pass to use the services.
+
+<Info>Your token may be used to track your use of the services</Info>
 
 ### Permissions
 
-Etiam lobortis ut odio ut fermentum. Nunc odio velit, sollicitudin at consectetur id, tristique eget turpis. Aliquam at risus vitae dolor sodales venenatis. In hac habitasse platea dictumst.
+- Create Users
+- View Users
 
-Aenean consequat diam eget mollis fermentum. [Quisque eu malesuada](/introduction) felis, non dignissim libero.
+## Spam Prevention
+
+Codemail has measures in place to prevent spam of our email system.
+
+<AccordionGroup>
+  <Accordion title="Multiple Emails Per IP"
+    We prevent to users from the same IP address from signing up in a row. (Another user has to signup to any Cdemail form on another IP to allow them to signup again)
+    
+    Unfortunately, at this time you cannot customize the verification message.
+  </Accordion>
+
+
+  <Accordion title="Email Verification"
+    We send a verification message to every email that signs up on Codemail, if a user did not signup they can remove their account from your mailing list.
+  </Accordion>
+</AccordionGroup>
