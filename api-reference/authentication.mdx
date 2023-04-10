@@ -3,7 +3,7 @@ title: "Authentication"
 description: "Authenticate requests to Codemail"
 ---
 
-Codemail uses `Tokens` to identify developers, access to this token can grant a user access to create forms on your behalf.
+Codemail uses `Tokens` to identify developers. Access to this token can grant a user access to create forms on your behalf.
 
 > We recommend that you store your token in an environment variable at all times.
 
@@ -30,13 +30,13 @@ Codemail has measures in place to prevent spam of our email system.
 
 <AccordionGroup>
   <Accordion title="Multiple Emails Per IP">
-    We prevent two users from the same IP address from signing up in a row. (Another user has to signup to any Cdemail form on another IP to allow them to signup again)
-    
-    Unfortunately, at this time you cannot customize the verification message.
+    We prevent two users from the same IP address signing up in a row. (Another user has to signup to any Cdemail form on another IP to allow them to signup again)
   </Accordion>
 
 
   <Accordion title="Email Verification">
     We send a verification message to every email that signs up on Codemail, if a user did not signup they can remove their account from your mailing list.
+    
+    Unfortunately, at this time you cannot customize the verification message.
   </Accordion>
 </AccordionGroup>
