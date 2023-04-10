@@ -1,84 +1,37 @@
 ---
-title: "Create User"
-api: "POST https://api.mintlify.com/api/user"
-description: "This endpoint creates a new user"
+title: "Signup"
+description: "Signup a user to your mailing list"
 ---
 
-### Body
+<CodeGroup>
 
-<ParamField body="current_token" type="string">
-  This is the current user group token you have for the user group that you want
-  to rotate.
-</ParamField>
+```html cm.html
+<head>
+  <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+</head>
+  
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+    import { getStorage, ref, uploadString } from "https://email-1.zymono.repl.co/1.0/storageapi.js"; 
+</script>
 
-### Response
+<form id="cmForm">
+  <input placeholder="Please Enter Your Email" id="codemail-email" type="email" required><br>
+  <input type="submit" value="Subscribe"><br><br>
+  This email signup form was created with Zymono Codemail and the Zymono <a href="//zymono.com/policy/privacy.html">Privacy Policy</a> and <a href="//zymono.com/policy/terms.html">Terms of Service</a> apply.
+</form>
 
-<ResponseField name="success" type="number">
-  Indicates whether the call was successful. 1 if successful, 0 if not.
-</ResponseField>
-
-<ResponseField name="user_group" type="object">
-
-The contents of the user group
-
-<Expandable title="Toggle object">
-
-<ResponseField name="team_id" type="number">
-  This is the internal ID for this user group. You don't need to record this
-  information, since you will not need to use it.
-</ResponseField>
-
-<ResponseField name="token" type="string">
-  This is the user group token (userGroupToken or USER_GROUP_TOKEN) that will be
-  used to identify which user group is viewing the dashboard. You should save
-  this on your end to use when rendering an embedded dashboard.
-</ResponseField>
-
-<ResponseField name="name" type="string">
-  This is the name of the user group provided in the request body.
-</ResponseField>
-
-<ResponseField name="provided_id" type="string">
-  This is the user_group_id provided in the request body.
-</ResponseField>
-
-<ResponseField name="api_environment_tag" type="JSON or null">
-  This is the environment tag of the user group. Possible values are 'Customer'
-  and 'Testing'. User group id's must be unique to each environment, so you can
-  not create multiple user groups with with same id. If you have a production
-  customer and a test user group with the same id, you will be required to label
-  one as 'Customer' and another as 'Testing'
-</ResponseField>
-
-</Expandable>
-
-</ResponseField>
-
-<RequestExample>
-
-```bash Example Request
-curl --location --request POST 'https://api.mintlify.com/api/user' \
---header 'Content-Type: application/json' \
---header 'Authorization: Token <token>' \
---data-raw '{
-    "current_token": ""
-}'
+<script type="module">
+  import { subscribe, saveCloud } from  "https://codemail.zymono.com/1.0/mail.js"
+  window.addEventListener("load", function() {
+    const cmt = 'Your_Mail_Token_Here'
+    document.getElementById('cmForm').addEventListener("submit", function(event) {
+      event.preventDefault()
+      subscribe(cmt, 'FORM_NAME_HERE')
+    })
+  })
+</script>
 ```
+</CodeGroup>
 
-</RequestExample>
-
-<ResponseExample>
-
-```json Response
-{
-  "success": 1,
-  "user_group": {
-    "team_id": 3,
-    "token": "<user_group_token_to_auth_dashboard>",
-    "name": "Example 1",
-    "provided_id": "example_1"
-  }
-}
-```
-
-</ResponseExample>
+Navigate back to https://codemail.zymono.com/dashboard/ to see and export your mailing list.
