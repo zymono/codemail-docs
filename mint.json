@@ -2,8 +2,8 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Zymono Codemail",
   "logo": {
-    "dark": "/logo/dark.png",
-    "light": "/logo/light.png"
+    "dark": "/favicon.png",
+    "light": "/favicon.png"
   },
   "favicon": "/favicon.png",
   "colors": {
@@ -54,6 +54,7 @@
       ]
     }
   ],
+  "backgroundImage": "/images/bg.png",
   "footerSocials": {
     "twitter": "https://twitter.com/useZymono",
     "github": "https://github.com/zymono",
