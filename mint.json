@@ -28,6 +28,11 @@
       "url": "api-reference"
     },
     {
+      "name": "Email Builder",
+      "icon": "pen-to-square",
+      "url": "build"
+    },
+    {
       "name": "Changelog",
       "icon": "list",
       "url": "https://codemail.zymono.com/changes"
