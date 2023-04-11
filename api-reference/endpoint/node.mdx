@@ -1,0 +1,21 @@
+---
+title: "NodeJS"
+description: "Signup a user to your mailing list in NodeJS"
+---
+
+Install the Codemail NPM package by running `npm i codemail` in your terminal.
+
+<CodeGroup>
+
+```js cm.js
+  const { subscribe } = require('codemail');
+  
+  subscribe("Token", "Form_Name", "Redirect URL")
+```
+</CodeGroup>
+
+Set Redirect URL to window.location to not redirect.
+
+<Info>Please note that our NodeJS package is experimental and may not work properly.</Info>
+
+Navigate back to https://codemail.zymono.com/dashboard/ to see and export your mailing list.
