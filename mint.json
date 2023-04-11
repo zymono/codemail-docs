@@ -45,7 +45,7 @@
     },
     {
       "group": "API Documentation",
-      "pages": ["api-reference/authentication", "api-reference/running", "api-reference/analytics"]
+      "pages": ["api-reference/authentication", "api-reference/running", "api-reference/analytics", "api-reference/components"]
     },
     {
       "group": "Examples",
