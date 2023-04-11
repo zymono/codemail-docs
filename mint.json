@@ -58,6 +58,12 @@
         "api-reference/endpoint/create", "api-reference/endpoint/signupcustomize", "api-reference/endpoint/node"
       ]
     }
+    {
+      "group": "Email Builder",
+      "pages": [
+        "build/build"
+      ]
+    }
   ],
   "backgroundImage": "/images/background (1).png",
   "footerSocials": {
