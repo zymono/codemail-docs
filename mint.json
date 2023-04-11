@@ -50,7 +50,7 @@
     {
       "group": "Examples",
       "pages": [
-        "api-reference/endpoint/create", "api-reference/endpoint/signupcustomize"
+        "api-reference/endpoint/create", "api-reference/endpoint/signupcustomize", "api-reference/endpoint/node"
       ]
     }
   ],
