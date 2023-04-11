@@ -1,0 +1,85 @@
+---
+title: "Components"
+description: "Custom Codemail HTML elements"
+---
+
+## Head
+
+```html
+<head>
+  <script src="https://codemail.zymono.com/1.0/components.js" defer></script>
+</head>
+```
+
+## Components
+
+<AccordionGroup>
+  <Accordion title="Promotion Message">
+    Help spread codemail by including this component.
+
+```html
+<cm-msg></cm-msg>
+```
+  </Accordion>
+
+  <Accordion title="Disclaimer">
+    Notify users that the Zymono Privacy Policy and Terms of Service apply to Codemail forms.
+    
+    ```html
+    <cm-disclaimer></cm-disclaimer>
+    ```
+  </Accordion>
+  
+  <Accordion title="Agreement">
+    Make users agree to your Terms of Service and Privacy Policy.
+    
+    ```html
+    <cm-agree data-tos="{terms_of_service_url}" data-privacy="{privacy_policy_url}"></cm-agree>
+    ```
+  </Accordion>
+  
+   <Accordion title="Form">
+    Create the whole subscribe form with one element
+    
+    ```html
+    <cm-form data-token="{Your_Token}" data-formName="{Form_Name}" data-redirect="{Completion_Redirect}"></cm-form>
+    ```
+  </Accordion>
+</AccordionGroup>
+
+## Styling Components
+
+You can style all the components with a little bit of CSS.
+
+```css
+  cm-msg {
+    font-family: sans-serif;
+  }
+
+  cm-disclaimer {
+    color: red;
+  }
+
+  cm-agree {
+    font-size: 30px;
+  }
+
+  cm-form input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  cm-form input[type=button], input[type=submit], input[type=reset] {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+}
+```
+
+Code © Zymono Codemail. For TESTING use only!
