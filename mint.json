@@ -18,8 +18,8 @@
     }
   ],
   "topbarCtaButton": {
-    "name": "Get Started",
-    "url": "https://codemail.zymono.com"
+    "type": "github",
+    "url": "https://github.com/zymono/codemail"
   },
   "anchors": [
     {
