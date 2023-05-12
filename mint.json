@@ -61,7 +61,7 @@
     {
       "group": "Email Builder",
       "pages": [
-        "build/build", "build/copyright"
+        "build/build"
       ]
     }
   ],
