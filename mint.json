@@ -33,11 +33,6 @@
       "url": "build"
     },
     {
-      "name": "Changelog",
-      "icon": "list",
-      "url": "https://codemail.zymono.com/changes"
-    },
-    {
       "name": "Open Source",
       "icon": "github",
       "url": "https://github.com/zymono/codemail"
@@ -46,7 +41,7 @@
   "navigation": [
     {
       "group": "Home",
-      "pages": ["introduction", "features"]
+      "pages": ["introduction", "features", "changes"]
     },
     {
       "group": "API Documentation",
