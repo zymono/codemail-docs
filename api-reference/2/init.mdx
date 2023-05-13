@@ -1,0 +1,71 @@
+---
+title: "Get Started"
+description: "Initiate Codemail"
+icon: "rocket-lauch"
+---
+
+# The Basics
+
+```html
+  <head>
+    <script src="https://codemail.zymono.com/2.0/mail.js"></script> <!-- Include the SDK file -->
+  </head>
+
+  <div id="cm"></div> <!-- Create an element in which to initiate Codemail -->
+
+  <script>
+    const codemail = new Codemail();
+    
+    codemail.init({
+      Token: 'Your_Token',
+      container: '#cm' //The query of your container (# for id, . for class)
+    })
+  </script>
+```
+
+# The Config
+
+```json
+  config: {
+    formName: 'Custom_Form_Name',
+    formURI: 'Custom_Redirect_URL',
+    style: {
+      css: 'Custom_CSS'
+    }
+  }
+```
+
+# Integrating
+
+```html
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Codemail</title>
+  <script src="https://codemail.zymono.com/2.0/mail.js"></script>
+</head>
+
+<body>
+  <div id="cm"></div>
+  <script>
+    const codemail = new Codemail();
+    
+    codemail.init({
+      Token: 'Your_Token',
+      container: '#cm', //The query of your container (# for id, . for class)
+      config: {
+        formName: 'Custom_Form_Name',
+        formURI: 'Custom_Redirect_URL',
+        style: {
+          css: 'Custom_CSS'
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
+```
