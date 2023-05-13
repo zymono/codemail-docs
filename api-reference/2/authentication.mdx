@@ -1,0 +1,47 @@
+---
+title: "Authentication"
+description: "Authenticate requests to Codemail 2.0"
+icon: "shield-check"
+---
+
+Codemail uses `Tokens` to identify developers. Access to this token can grant a user access to create forms on your behalf.
+
+> We recommend that you store your token in an environment variable at all times.
+
+```js
+codemail.init({
+Token: 'Your_Token_Here'
+})
+```
+
+## API Tokens
+
+A token is granted to your account upon creation and can be recieved by going to your dashboard and clicking `Copy Mail Token`.
+
+This token grants your a pass to use the Zymono Codemail services. If your token is revoked, so is your pass to use the services.
+
+<Info>Your token may be used to track your use of the services</Info>
+
+### Permissions
+
+- Create Users
+- View Users
+
+## Spam Prevention
+
+Codemail has measures in place to prevent spam of our email system.
+
+<AccordionGroup>
+  <Accordion title="Multiple Emails Per IP">
+    We prevent two users from the same IP address signing up in a row. (Another user has to signup to any Cdemail form on another IP to allow them to signup again)
+    
+    If for some reason this is a problem contact support at: inovate@code.mail.zymono.com
+  </Accordion>
+
+
+  <Accordion title="Email Verification">
+    We send a verification message to every email that signs up on Codemail, if a user did not signup they can remove their account from your mailing list.
+    
+    Unfortunately, at this time you cannot customize the verification message.
+  </Accordion>
+</AccordionGroup>
