@@ -54,6 +54,10 @@
       ]
     },
     {
+      "group": "API 2.0 Documentation",
+      "pages": ["api-reference/2/authentication", "api-reference/2/analytics", "api-reference/2/init"]
+    },
+    {
       "group": "Email Builder",
       "pages": [
         "build/build"
